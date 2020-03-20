@@ -13,6 +13,10 @@ const Blog = require("./models/blog"),
   Comment = require("./models/comment"),
   User = require("./models/user");
 
+const indexRoutes = require("./routes/index"),
+  blogRoutes = require("./routes/blog"),
+  commentRoutes = require("./routes/comment");
+
 const app = express();
 
 // SETTING APLICATION
