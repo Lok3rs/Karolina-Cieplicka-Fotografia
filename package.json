@@ -1,0 +1,22 @@
+{
+  "name": "karolina-cieplicka-fotografia",
+  "version": "1.0.0",
+  "description": "Strona internetowa fotografa-hobbysty Karoliny Cieplickiej",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lok3rs/Karolina-Cieplicka-Fotografia.git"
+  },
+  "author": "Dawid Adamski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lok3rs/Karolina-Cieplicka-Fotografia/issues"
+  },
+  "homepage": "https://github.com/Lok3rs/Karolina-Cieplicka-Fotografia#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
