@@ -1,0 +1,17 @@
+<%- include("../partials/header")%>
+
+<form action="/login" method="post">
+    <div class="container">
+        <div class="form-group login-form">
+            <label for="usrnam">Username: </label>
+            <input type="text" name="username" id="usrnam" class="form-control">
+            <label for="psswrd">Password</label>
+            <input type="password" name="password" id="psswrd" class="form-control">
+            <input type="submit" value="Login" class="btn btn-lg btn-success mt-3">
+        </div>
+    </div>
+
+
+</form>
+
+<%- include("../partials/footer")%>

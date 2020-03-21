@@ -1,0 +1,21 @@
+<%- include("../partials/header")%>
+
+<div class="container form-register">
+    <form action="/register" method="post">
+        <label for="usrnam">Username: </label>
+        <input type="text" name="username" id="usrnam" class="form-control">
+        <label for="mail">E-mail address: </label>
+        <input type="email" name="email" id="mail" class="form-control">
+        <small id="emailHelp" class="form-text text-muted">
+            Type correct email address, it'll be needed to account configuration.
+        </small>
+        <label for="psswrd">Password</label>
+        <input type="password" name="password" id="psswrd" class="form-control">
+        <small id="passwordHelp" class="form-text text-muted">
+            Make it strong and safe! At least one great, one small character and number.
+        </small>
+        <input type="submit" value="Register!" class="btn btn-lg btn-success mt-3">
+    </form>
+</div>
+
+<%- include("../partials/footer")%>
