@@ -1,5 +1,20 @@
 <%- include("../partials/header") %>
 
-
+<div class="container">
+    <div class="row">
+        <% blog.forEach((blog) => { %>
+        <div class="col-12">
+            <div class="card mb-4">
+                <img src="<%= blog.img %>" class="card-img-top" alt="Image of <%= blog.title %>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= blog.title %></h5>
+                    <p class="card-text"><%= blog.content.substring(0, 100) %>...</p>
+                    <a href="/blog/<%=blog._id %>" class="btn btn-primary btn-blog">Zobacz więcej</a>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
 
 <%- include("../partials/footer") %>

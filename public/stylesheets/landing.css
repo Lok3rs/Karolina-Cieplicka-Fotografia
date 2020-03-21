@@ -9,6 +9,7 @@ body {
   position: relative;
   text-align: center;
   padding-top: 40vh;
+  display: none;
 }
 
 #landing-header h1 {
@@ -103,23 +104,142 @@ body {
 }
 
 .btn-success {
-  background-image: linear-gradient(
-    110.3deg,
-    rgba(238, 179, 123, 1) 8.7%,
-    rgba(216, 103, 77, 1) 47.5%,
-    rgba(114, 43, 54, 1) 89.1%
-  );
+  background-image: linear-gradient(110.3deg,
+      rgba(238, 179, 123, 1) 8.7%,
+      rgba(216, 103, 77, 1) 47.5%,
+      rgba(114, 43, 54, 1) 89.1%);
   color: #fff;
   border: none;
-  transition: 0.3s;
 }
 
 .btn-success:hover {
-  background-image: linear-gradient(
-    110.3deg,
-    rgb(235, 184, 137) 8.7%,
-    rgb(216, 117, 94) 47.5%,
-    rgb(114, 51, 61) 89.1%
-  );
+  background-image: linear-gradient(110.3deg,
+      rgb(235, 184, 137) 8.7%,
+      rgb(216, 117, 94) 47.5%,
+      rgb(114, 51, 61) 89.1%);
   color: #ece7e3;
+}
+
+/* LOADER */
+
+
+.loader-container {
+  text-align: center;
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-top: 30vh;
+  top: 0;
+  left: 0;
+}
+
+section {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  min-height: 215px;
+  vertical-align: top;
+  margin: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    min-width: 350px;
+  }
+}
+
+.loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 75px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.loader-13 .css-heart {
+  position: absolute;
+  -webkit-animation: star-fly-out 1s ease alternate infinite;
+  animation: star-fly-out 1s ease alternate infinite;
+  -webkit-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+}
+
+.loader-13 .heart1 {
+  top: 0;
+  left: 30px;
+}
+
+.loader-13 .heart2 {
+  left: 60px;
+  top: 30px;
+}
+
+.loader-13 .heart3 {
+  top: 60px;
+  left: 30px;
+}
+
+.loader-13 .heart4 {
+  left: 0;
+  top: 30px;
+}
+
+
+.css-heart {
+  position: absolute;
+  /*      width: 100px;
+  height: 90px; */
+}
+
+.css-heart:before,
+.css-heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #950d0d;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.css-heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+
+
+
+@-webkit-keyframes star-fly-out {
+  0% {
+    top: 19px;
+    left: 19px;
+  }
+
+  100% {}
+}
+
+@keyframes star-fly-out {
+  0% {
+    top: 19px;
+    left: 19px;
+  }
+
+  100% {}
 }

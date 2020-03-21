@@ -2,6 +2,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    min-height: 100%;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(233, 175, 132, 1) 0%, rgba(186, 126, 81, 1) 95.6%);
 }
 
@@ -16,10 +17,41 @@ body {
     font-weight: 600;
 }
 
-.navbar-nav {
+.navbar {
     font-size: 20px;
+    background-color: rgba(227, 168, 125, 0.5);
 }
 
 .nav-item a img {
     height: 70px;
+}
+
+/* blog list */
+.card {
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+.card img {
+    width: 40vw;
+    height: auto;
+    margin: 0px auto;
+}
+
+.btn-primary.btn-blog {
+    background-image: linear-gradient(110.3deg,
+            rgba(238, 179, 123, 1) 8.7%,
+            rgba(216, 103, 77, 1) 47.5%,
+            rgba(114, 43, 54, 1) 89.1%);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary.btn-blog:hover {
+    background-image: linear-gradient(110.3deg,
+            rgb(235, 184, 137) 8.7%,
+            rgb(216, 117, 94) 47.5%,
+            rgb(114, 51, 61) 89.1%);
+    color: #ece7e3;
 }

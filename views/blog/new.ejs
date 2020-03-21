@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+    <h1>Nowy post: </h1>
+    <form action="/blog" method="POST">
+        <div class="form-group">
+            <label for="blogTitle">Tytuł</label>
+            <input type="text" name="blog[title]" class="form-control" id="blogTitle">
+            <label for="blogImg">Link do zdjęcia</label>
+            <input type="text" name="blog[img]" class="form-control" id="blogImg">
+            <small id="emailHelp" class="form-text text-muted">
+                W przyszłości ogarnę wrzucanie zdjęć na serwer!
+            </small>
+            <label for="blogContent">Twój post: </label>
+            <textarea name="blog[content]" cols="30" rows="10" class="form-control" id="blogContent"></textarea>
+            <input type="submit" value="Dodaj" class="btn btn-lg btn-primary mt-2">
+        </div>
+    </form>
+</div>
+<%- include("../partials/footer") %>
