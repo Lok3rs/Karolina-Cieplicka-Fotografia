@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karolina Cieplicka - Fotografia</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP STYLESHEETS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav" id="nav-ul">
+                    <li class="nav-item">
+                        <a href="/blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog" class="navbar-brand">
+                            <img src="/media/camera.png" alt="Logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">O mnie</a>
+                    </li class="nav-item">
+                    <li>
+                        <a href="#" class="nav-link">Kontakt</a>
+                    </li class="nav-item">
+                    <% if(currentUser){ %>
+                    <li class="nav-item">
+                        <a href="/blog/new" class="nav-link">Dodaj post</a>
+                    </li>
+                    <li>
+                        <a href="/logout" class="nav-link">Wyloguj</a>
+                    </li>
+
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+
+    </nav>

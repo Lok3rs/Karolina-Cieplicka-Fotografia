@@ -1,0 +1,25 @@
+/* main styles */
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(233, 175, 132, 1) 0%, rgba(186, 126, 81, 1) 95.6%);
+}
+
+/* navigation */
+#nav-ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-family: "Amatic SC", cursive;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navbar-nav {
+    font-size: 20px;
+}
+
+.nav-item a img {
+    height: 70px;
+}
