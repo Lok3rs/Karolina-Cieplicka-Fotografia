@@ -19,7 +19,7 @@ body {
 
 .navbar {
     font-size: 20px;
-    background-color: rgba(227, 168, 125, 0.5);
+    /* background-color: rgba(227, 168, 125, 0.5); */
 }
 
 .nav-item a img {
@@ -129,24 +129,19 @@ body {
 
 .sis-1 {
     background-image: url("../media/sis-1.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
 }
 
 .sis-2 {
     background-image: url("../media/sis-2.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
 }
 
 .sis-3 {
     background-image: url("../media/sis-3.jpg");
+}
+
+.sis-1,
+.sis-2,
+.sis-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
