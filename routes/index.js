@@ -7,6 +7,10 @@ const express = require("express"),
 router.get("/", function(req, res) {
   res.render("landing");
 });
+// welcome page route
+router.get("/welcome", (req, res) => {
+  res.render("welcome");
+});
 // =======================
 // AUTH/LOGIN ROUTES
 // =======================

@@ -47,4 +47,20 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
   });
 });
 
+// DETAIL ROUTE
+router.get("/:id", (req, res) => {
+  Blog.findById(req.params.id)
+    .populate("comments")
+    .exec((err, blog) => {
+      if (err) {
+        req.flash("error", "Didn't find that post");
+        res.redirect("/");
+      } else {
+        res.render("blog/show", {
+          blog: blog
+        });
+      }
+    });
+});
+
 module.exports = router;

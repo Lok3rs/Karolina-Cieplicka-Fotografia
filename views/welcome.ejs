@@ -1,0 +1,59 @@
+<%- include ("partials/header")%>
+
+<div class="container">
+    <h1 class="hi-message">Cześć i czołem! Nazywam się Karolina Cieplicka i lubię robić
+        fotki!<br> Miło
+        mi, że
+        odwiedziłeś moją stronę!
+    </h1>
+
+    <img src="/media/selfie.jpg" alt="Selfie" class="selfie">
+    <div class="its-me">
+        To ja!
+        <img src="/media/arrow.png" alt="arrow" class="arrow">
+    </div>
+</div>
+<div class="container">
+    <h2 class="text-center spec-h2">Specjalizuję się w takich fajnych fotkach narzeczeńskich: </h2>
+</div>
+<div class="carousel-wrapper">
+    <div id="img-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#img-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#img-carousel" data-slide-to="1"></li>
+            <li data-target="#img-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active carousel-1">
+            </div>
+            <div class="carousel-item carousel-2">
+            </div>
+            <div class="carousel-item carousel-3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#img-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Poprzedni</span>
+        </a>
+        <a class="carousel-control-next" href="#img-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Następny</span>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="text-left mt-4 ml-5 spec-h2"><img src="/media/competence.png" class="img-competence">Ale potrafię również
+        inne
+        rzeczy:
+    </h2>
+</div>
+
+<div class="sis-1"></div>
+<div class="sis-2"></div>
+<div class="sis-3"></div>
+
+
+
+
+<%- include ("partials/footer")%>
