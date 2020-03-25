@@ -4,8 +4,8 @@ $(".carousel").carousel({
 
 $(window).on("scroll", () => {
   const navbar = $(".navbar");
-  navbar.css("background-color", "rgba(227, 168, 125, 0.5)");
-  if (navbar.position().top == 0) {
-    navbar.css("background-color", "");
-  }
+  navbar.position().top == 0
+    ? navbar.css("background-color", "")
+    : navbar.css("background-color", "rgba(243, 236, 228, 0.5)");
 });
+$(".loadmore").html = "Załaduj więcej";

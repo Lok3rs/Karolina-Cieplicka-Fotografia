@@ -4,7 +4,7 @@ body {
     padding: 0px;
     font-family: "Amatic SC", cursive;
     min-height: 100%;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(233, 175, 132, 1) 0%, rgba(186, 126, 81, 1) 95.6%);
+    background: #F3ECE4;
 }
 
 /* navigation */
@@ -19,7 +19,7 @@ body {
 
 .navbar {
     font-size: 20px;
-    /* background-color: rgba(227, 168, 125, 0.5); */
+    transition: 0.5s;
 }
 
 .nav-item a img {
@@ -46,6 +46,29 @@ body {
     bottom: 30px;
 }
 
+.social-h2 {
+    line-height: 47px;
+
+}
+
+.social-h2:nth-of-type(1) {
+    margin-left: 10vw;
+}
+
+.social-h2:nth-of-type(2) {
+    margin-left: 40vw;
+}
+
+.social-img {
+    height: 40px;
+    width: auto;
+
+}
+
+.social-img:hover {
+    height: 43px;
+    transition: 0.5s;
+}
 
 @media only screen and (max-width: 600px) {
     .hi-message {
@@ -128,11 +151,11 @@ body {
 }
 
 .sis-1 {
-    background-image: url("../media/sis-1.jpg");
+    background-image: url("../media/sis-2.jpg");
 }
 
 .sis-2 {
-    background-image: url("../media/sis-2.jpg");
+    background-image: url("../media/grass.jpg");
 }
 
 .sis-3 {
