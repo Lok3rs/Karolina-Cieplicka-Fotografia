@@ -7,6 +7,10 @@ body {
     background: #F3ECE4;
 }
 
+.alert {
+    font-size: 25px;
+}
+
 /* navigation */
 #nav-ul {
     display: flex;

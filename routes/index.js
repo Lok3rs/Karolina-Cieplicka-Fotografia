@@ -29,10 +29,7 @@ router.post("/register", (req, res) => {
         res.redirect("/register");
       }
       passport.authenticate("local")(req, res, () => {
-        req.flash(
-          "success",
-          `Succesfully registrated! Welcome ${user.username}!`
-        );
+        req.flash("success", `Zarejestrowano! Witaj ${user.username}!`);
         res.redirect("/blog");
       });
     }
@@ -48,13 +45,13 @@ router.post(
     failureFlash: true
   }),
   (req, res) => {
-    console.log(`${currentUser.username} logged in`);
+    req.flash("success", `Witaj ponownie ${user.username}`);
   }
 );
 
 router.get("/logout", (req, res) => {
   req.logout();
-  req.flash("success", "Logged out! See you again!");
+  req.flash("success", "Wylogowano, miłego dnia!");
   res.redirect("/blog");
 });
 

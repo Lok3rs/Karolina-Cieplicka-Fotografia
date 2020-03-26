@@ -53,7 +53,7 @@ router.get("/:id", (req, res) => {
     .populate("comments")
     .exec((err, blog) => {
       if (err) {
-        req.flash("error", "Didn't find that post");
+        req.flash("error", "Nie znalazłem takiego posta.:(");
         res.redirect("/");
       } else {
         res.render("blog/show", {
@@ -61,6 +61,46 @@ router.get("/:id", (req, res) => {
         });
       }
     });
+});
+
+// EDIT FORM VIEW
+router.get("/:id/edit", middleware.isLoggedIn, (req, res) => {
+  Blog.findById(req.params.id, (err, blog) => {
+    if (err) {
+      req.flash("Nie masz uprawnień do tego!");
+      res.redirect("back");
+    } else {
+      res.render("blog/edit", {
+        blog: blog
+      });
+    }
+  });
+});
+
+// EDIT VIEW
+router.put("/:id", middleware.isLoggedIn, (req, res) => {
+  Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, blog) => {
+    if (err) {
+      req.flash("Coś poszło nie tak :-(!");
+      res.redirect("back");
+    } else {
+      res.redirect(`/blog/${blog._id}`);
+    }
+  });
+});
+
+// DELETE VIEW
+
+router.delete("/:id", middleware.isLoggedIn, (req, res) => {
+  Blog.findByIdAndDelete(req.params.id, (err, blog) => {
+    if (err) {
+      req.flash("Coś poszło nie tak :-(!");
+      res.redirect("/blog");
+    } else {
+      req.flash("success", "Post usunięty!");
+      res.redirect("/blog");
+    }
+  });
 });
 
 module.exports = router;

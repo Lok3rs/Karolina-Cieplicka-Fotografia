@@ -10,15 +10,20 @@
         </p>
         <p class="blog-content"><%= blog.content %></p>
         <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
-        <a href="/blog/<%= blog._id %>/edit" class="btn btn-primary"><i class="far fa-edit"></i>Edit post</a>
+        <a href="/blog/<%= blog._id %>/edit" class="btn btn-primary"><i class="far fa-edit"></i>Edytuj</a>
         <form style="display: inline" method="POST" action="/blog/<%=blog._id%>?_method=DELETE">
-            <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i>Delete Post</button>
+            <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i>Usuń</button>
         </form>
         <% } %>
         <p class="text-right"><a href="/blog/<%= blog._id %>/comment/new" class="btn btn-primary btn-blog">Dodaj
                 komentarz</a></p>
         <% blog.comments.forEach((comment) => { %>
-        <p><strong><%= comment.author.username %></strong> - <%= comment.text %></p>
+        <p><%= comment.author %>- <strong><%= comment.text %></strong><%if(currentUser) { %>
+            <form id="delete-form" action="/blog/<%=blog._id %>/comment/<%=comment._id %>?_method=DELETE" method="POST">
+                <input type="submit" class="btn btn-sm btn-danger" value="Usuń">
+            </form>
+            <% } %></p>
+
 
         <% }); %>
     </div>

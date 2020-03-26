@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <form action="/blog/<%= blog._id %>?_method=PUT" method="POST">
+        <div class="form-group">
+            <label for="blogTitle">Tytuł</label>
+            <input type="text" name="blog[title]" class="form-control" id="blogTitle" value="<%= blog.title %>">
+            <label for="blogImg">Link do zdjęcia</label>
+            <input type="text" name="blog[img]" class="form-control" id="blogImg" value="<%= blog.img %>">
+            <label for="blogContent">Twój post: </label>
+            <textarea name="blog[content]" cols="30" rows="10" class="form-control" id="blogContent"><%= blog.content %>
+            </textarea>
+            <input type="submit" value="Akceptuj edycuję" class="btn btn-lg btn-primary mt-2">
+            <a href="/blog/<%= blog._id %>" class="btn btn-lg btn-danger mt-2">Wróć</a>
+        </div>
+
+    </form>
+</div>
+
+
+<%- include("../partials/footer") %>

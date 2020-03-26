@@ -3,7 +3,7 @@ const middlewareObj = {
     if (req.isAuthenticated()) {
       return next();
     }
-    req.flash("error", "You need to be logged in!");
+    req.flash("error", "Musisz być zalogowana!");
     res.redirect("/login");
   }
 };
