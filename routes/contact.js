@@ -59,7 +59,6 @@ router.get("/inbox/:id", middleware.isLoggedIn, (req, res) => {
 });
 
 // DELETE MESSAGE ROUTE
-
 router.delete("/inbox/:id", middleware.isLoggedIn, (req, res) => {
   Contact.findByIdAndDelete(req.params.id, (err, contact) => {
     if (err) {

@@ -6,9 +6,7 @@ const express = require("express"),
   Comment = require("../models/comment"),
   middleware = require("../middleware");
 
-// ==================================
-//  COMMENTS ROUTES
-// ==================================
+//  NEW COMMENT ROUTES
 router.get("/new", (req, res) => {
   Blog.findById(req.params.id, (err, blog) => {
     if (err) {

@@ -3,17 +3,17 @@ const express = require("express"),
   passport = require("passport"),
   User = require("../models/user");
 
-//root route
+// LANDING PAGE ROUTE
 router.get("/", function(req, res) {
   res.render("landing");
 });
-// welcome page route
+
+// WELCOME PAGE ROUTE
 router.get("/welcome", (req, res) => {
   res.render("welcome");
 });
-// =======================
-// AUTH/LOGIN ROUTES
-// =======================
+
+// REGISTER/LOGIN ROUTES
 router.get("/register", (req, res) => res.render("auth/register"));
 
 router.post("/register", (req, res) => {

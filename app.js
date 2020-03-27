@@ -1,4 +1,4 @@
-// DECLARING REQUIRES AND CONSTANTS
+// REQUIRES
 const methodOverride = require("method-override"),
   sanitizer = require("express-sanitizer"),
   bodyParser = require("body-parser"),
@@ -6,14 +6,9 @@ const methodOverride = require("method-override"),
   express = require("express"),
   flash = require("connect-flash"),
   passport = require("passport"),
-  localStrategy = require("passport-local"),
-  passportLocalMongoose = require("passport-local-mongoose");
+  localStrategy = require("passport-local");
 
-const Blog = require("./models/blog"),
-  Comment = require("./models/comment"),
-  User = require("./models/user"),
-  Contact = require("./models/contact"),
-  Gallery = require("./models/gallery");
+const User = require("./models/user");
 
 const indexRoutes = require("./routes/index"),
   blogRoutes = require("./routes/blog"),
@@ -22,9 +17,9 @@ const indexRoutes = require("./routes/index"),
   galleryRoutes = require("./routes/gallery"),
   fotoRoutes = require("./routes/foto");
 
+// SETTING APLICATION
 const app = express();
 
-// SETTING APLICATION
 mongoose
   .connect(
     "mongodb+srv://Lok3rs:z3xjek39@cluster0-q5ytv.mongodb.net/karolina?retryWrites=true&w=majority",
@@ -79,7 +74,6 @@ app.use("/gallery/", galleryRoutes);
 app.use("/gallery/:id/foto", fotoRoutes);
 
 // Listening
-
 app.listen(3000, () => {
   console.log("App listening at port 3000");
 });

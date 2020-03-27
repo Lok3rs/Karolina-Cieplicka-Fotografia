@@ -1,4 +1,5 @@
 <%- include("../partials/header") %>
+
 <div class="container">
     <h1>Dodawanie komentarza do <%= blog.title %></h1>
     <form action="/blog/<%= blog._id %>/comment" method="POST">
@@ -11,6 +12,5 @@
         </div>
     </form>
 </div>
-
 
 <%- include("../partials/footer") %>

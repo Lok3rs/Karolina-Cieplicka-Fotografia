@@ -1,6 +1,5 @@
 const express = require("express"),
   Gallery = require("../models/gallery"),
-  Foto = require("../models/fotos"),
   router = express.Router(),
   middleware = require("../middleware");
 
@@ -58,6 +57,7 @@ router.get("/:id", (req, res) => {
       }
     });
 });
+
 // GALLERY DELETE ROUTE
 router.delete("/:id", middleware.isLoggedIn, (req, res) => {
   Gallery.findByIdAndDelete(req.params.id, (err, gallery) => {

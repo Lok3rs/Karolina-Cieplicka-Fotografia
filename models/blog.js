@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// MONGOOSE/MODEL SCHEMA
 const blogSchema = new mongoose.Schema({
   title: String,
   img: String,

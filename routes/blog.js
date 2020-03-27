@@ -15,6 +15,7 @@ router.get("/", (req, res) => {
     }
   });
 });
+
 // ARCHIVE ROUTE
 router.get("/archive", (req, res) => {
   Blog.find({}, (err, blog) => {
@@ -89,7 +90,7 @@ router.get("/:id/edit", middleware.isLoggedIn, (req, res) => {
   });
 });
 
-// EDIT VIEW
+// EDIT VIEW ROUTE
 router.put("/:id", middleware.isLoggedIn, (req, res) => {
   Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, blog) => {
     if (err) {
@@ -101,8 +102,7 @@ router.put("/:id", middleware.isLoggedIn, (req, res) => {
   });
 });
 
-// DELETE VIEW
-
+// DELETE VIEW ROUTe
 router.delete("/:id", middleware.isLoggedIn, (req, res) => {
   Blog.findByIdAndDelete(req.params.id, (err, blog) => {
     if (err) {

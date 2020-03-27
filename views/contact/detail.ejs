@@ -1,23 +1,19 @@
 <%- include("../partials/header") %>
 <div class="container">
-
     <div class="pt-4 inbox-detail">
-
         <h2 class="inbox-message-title">Wiadomość od <b><%= contact.author %></b></h2>
         <p>Email: <b><a href="mailto:<%= contact.email %>"><%= contact.email %></a></b></p>
         <% if(contact.tel){ %>
         <p>Numer telefonu: <a href="tel:<%= contact.tel %>"><b><%= contact.tel %></b></a></p>
         <% } %>
-        <p>Otrzymano <b><%= contact.sent.toLocaleDateString("pl-PL") %></b>
-        </p>
+        <p>Otrzymano <b><%= contact.sent.toLocaleDateString("pl-PL") %></b></p>
         <p><b>Treść: </b></p>
         <p class="inbox-message-content"><%= contact.text %></p>
         <form style="display: inline" method="POST" action="/contact/inbox/<%=contact._id%>?_method=DELETE">
             <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i> Usuń</button>
         </form>
         <a href="/contact/inbox" class="btn btn-info">Powrót</a>
-
     </div>
-
 </div>
+
 <%- include("../partials/footer") %>
