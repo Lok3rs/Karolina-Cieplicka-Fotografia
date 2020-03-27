@@ -10,9 +10,9 @@
         </p>
         <p class="blog-content"><%= blog.content %></p>
         <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
-        <a href="/blog/<%= blog._id %>/edit" class="btn btn-primary"><i class="far fa-edit"></i>Edytuj</a>
+        <a href="/blog/<%= blog._id %>/edit" class="btn btn-primary"><i class="far fa-edit"></i> Edytuj</a>
         <form style="display: inline" method="POST" action="/blog/<%=blog._id%>?_method=DELETE">
-            <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i>Usuń</button>
+            <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i> Usuń</button>
         </form>
         <% } %>
         <p class="text-right"><a href="/blog/<%= blog._id %>/comment/new" class="btn btn-primary btn-blog">Dodaj

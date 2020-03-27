@@ -1,0 +1,54 @@
+<%- include ("../partials/header")%>
+<div class="container gallery-container">
+
+    <div class="pt-4">
+
+        <h2 class="gallery-title"><%= gallery.title %>
+            <% if(currentUser){ %>
+            <a href="/gallery/<%= gallery._id %>/edit" class="btn btn-info btn-sm"> Edytuj</a>
+            <form id="delete-form" action="/gallery/<%=gallery._id %>/?_method=DELETE" method="POST"
+                style="display: inline;">
+                <input type="submit" class="btn btn-sm btn-danger" value="Usuń">
+            </form>
+
+            <% } %>
+
+        </h2>
+        <p><%= gallery.created.toLocaleDateString("pl-PL") %>
+        </p>
+        <% if(gallery.desc){ %>
+        <p class="gallery-description"><%= gallery.desc %></p>
+        <% } %>
+
+        <% if(currentUser) {%>
+        <p class="text-right">
+            <a href="/gallery/<%= gallery._id %>/foto/new" class="btn btn-info">Dodaj zdjęcie</a></p>
+        <%}%>
+        <div class="gallery">
+            <div class="row">
+               <% gallery.fotos.forEach((foto) => { %>
+
+        <div class="col-6 col-md-4 col-xl-3"><a href="<%= foto.url %>" data-lightbox="mygallery"
+                class="gallery-thumbnail-link"><img src="<%= foto.url %>" class="gallery-thumbnail mt-3"></a>
+            <% if(currentUser){ %>
+            <form id="delete-form" action="/gallery/<%=gallery._id %>/foto/<%=foto._id%>?_method=DELETE" method="POST">
+                <input type="submit" class="btn btn-sm btn-danger mt-1" value="Usuń">
+            </form>
+            <% } %>
+        </div>
+
+        <% }); %>
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+<%- include ("../partials/footer")%>

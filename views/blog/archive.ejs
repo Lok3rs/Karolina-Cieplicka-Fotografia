@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+    <table class="archive-list">
+        <th>Data dodania</th>
+        <th>Tytuł</th>
+        <th></th>
+        <% for(let i = blog.length-1; i >= 0 ; i--) {%>
+
+        <tr>
+            <td><%= blog[i].created.toLocaleDateString("pl-PL") %></td>
+            <td><%= blog[i].title %></td>
+            <td><a href="/blog/<%=blog[i]._id %>" class="btn btn-sm btn-primary btn-blog">Zobacz więcej</a></td>
+        </tr>
+
+        <% } %>
+    </table>
+</div>
+
+<%- include("../partials/footer") %>

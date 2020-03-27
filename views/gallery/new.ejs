@@ -1,0 +1,18 @@
+<%- include("../partials/header") %>
+
+
+<div class="container">
+    <h1>Nowa galeria: </h1>
+    <form action="/gallery" method="POST">
+        <div class="form-group">
+            <label for="galleryTitle">Nazwa galerii</label>
+            <input type="text" name="gallery[title]" class="form-control" id="galleryTitle">
+            <label for="galleryImg">Link do zdjęcia głównego</label>
+            <input type="text" name="gallery[img]" class="form-control" id="galleryImg">
+            <label for="galleryDescription">Opis(opcjonalnie) </label>
+            <textarea name="gallery[desc]" cols="30" rows="10" class="form-control" id="galleryDescriptiont"></textarea>
+            <input type="submit" value="Dodaj" class="btn btn-lg btn-primary mt-2">
+        </div>
+    </form>
+</div>
+<%- include("../partials/footer") %>

@@ -2,19 +2,22 @@
 
 <div class="container">
     <div class="row">
-        <% blog.forEach((blog) => { %>
+
+        <% for(let i = blog.length-1; i >= 0 ; i--) { 
+            if(i < blog.length-5) break;%>
         <div class="col-12">
             <div class="card mb-4">
-                <img src="<%= blog.img %>" class="card-img-top" alt="Image of <%= blog.title %>">
+                <img src="<%= blog[i].img %>" class="card-img-top" alt="Image of <%= blog[i].title %>">
                 <div class="card-body">
-                    <h5 class="card-title"><%= blog.title %></h5>
-                    <p class="card-text"><%= blog.content.substring(0, 100) %>...</p>
-                    <a href="/blog/<%=blog._id %>" class="btn btn-primary btn-blog">Zobacz więcej</a>
+                    <h5 class="card-title"><%= blog[i].title %></h5>
+                    <p class="card-text"><%= blog[i].content.substring(0, 100) %>...</p>
+                    <a href="/blog/<%=blog[i]._id %>" class="btn btn-primary btn-blog">Zobacz więcej</a>
                 </div>
             </div>
         </div>
-        <% }); %>
+        <% } %>
     </div>
+    <p>Aby zobaczyć wszystkie posty odwiedź <a href="/blog/archive">ARCHIWUM</a></p>
 </div>
 
 <%- include("../partials/footer") %>

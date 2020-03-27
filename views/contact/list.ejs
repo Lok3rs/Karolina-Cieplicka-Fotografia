@@ -1,0 +1,23 @@
+<%- include("../partials/header") %>
+<div class="container">
+    <h1 class="inbox-header text-center">Twoja skrzynka odbiorcza</h1>
+    <table class="inbox-list">
+        <th>Data</th>
+        <th>Nadawca</th>
+        <th></th>
+        <% for(let i = contact.length-1; i >= 0; i--) { %>
+        <tr class="inbox-item">
+            <td><b><%= contact[i].sent.toLocaleDateString("pl-PL") %></b></td>
+            <td>Wiadomość od
+                <b><%= contact[i].author %></b></td>
+            <td><a href="/contact/inbox/<%=contact[i]._id %>" class="btn btn-primary btn-sm btn-blog">Wyświetl</a>
+                <form style="display: inline" method="POST" action="/contact/inbox/<%=contact[i]._id%>?_method=DELETE">
+                    <button class="btn btn-danger btn-sm" type="submit"><i class="far fa-trash-alt"></i></button>
+                </form>
+            </td>
+        </tr>
+
+        <% } %>
+    </table>
+</div>
+<%- include("../partials/footer") %>

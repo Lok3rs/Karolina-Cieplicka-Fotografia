@@ -1,0 +1,12 @@
+<%- include ("../partials/header")%>
+<div class="container">
+    <h1>Dodawanie zdjęcia do <%= gallery.title %></h1>
+    <form action="/gallery/<%= gallery._id %>" method="POST">
+        <div class="form-group">
+            <label for="fotoUrl">Link do zdjęcia: </label>
+            <input type="text" name="foto[url]" class="form-control" id="fotoUrl">
+            <input type="submit" value="Dodaj zdjęcie" class="btn btn-lg btn-primary btn-blog mt-2">
+        </div>
+    </form>
+</div>
+<%- include ("../partials/footer")%>

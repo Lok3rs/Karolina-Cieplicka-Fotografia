@@ -11,11 +11,16 @@ const methodOverride = require("method-override"),
 
 const Blog = require("./models/blog"),
   Comment = require("./models/comment"),
-  User = require("./models/user");
+  User = require("./models/user"),
+  Contact = require("./models/contact"),
+  Gallery = require("./models/gallery");
 
 const indexRoutes = require("./routes/index"),
   blogRoutes = require("./routes/blog"),
-  commentRoutes = require("./routes/comment");
+  commentRoutes = require("./routes/comment"),
+  contactRoutes = require("./routes/contact"),
+  galleryRoutes = require("./routes/gallery"),
+  fotoRoutes = require("./routes/foto");
 
 const app = express();
 
@@ -69,6 +74,9 @@ app.use((req, res, next) => {
 app.use("/", indexRoutes);
 app.use("/blog", blogRoutes);
 app.use("/blog/:id/comment", commentRoutes);
+app.use("/contact/", contactRoutes);
+app.use("/gallery/", galleryRoutes);
+app.use("/gallery/:id/foto", fotoRoutes);
 
 // Listening
 

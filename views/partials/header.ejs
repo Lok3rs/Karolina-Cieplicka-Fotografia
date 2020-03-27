@@ -11,8 +11,17 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP STYLESHEETS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Lightbox -->
+
+    <script src="/scripts/lightbox.js"></script>
+    <link rel="stylesheet" href="/stylesheets/lightbox.css">
 </head>
 
 <body>
@@ -29,7 +38,7 @@
                         <a href="/blog" class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Galeria</a>
+                        <a href="/gallery" class="nav-link">Galeria</a>
                     </li>
                     <% if(currentUser){ %>
                     <li class="nav-item">
@@ -45,7 +54,7 @@
                         <a href="#" class="nav-link">O mnie</a>
                     </li class="nav-item">
                     <li>
-                        <a href="#" class="nav-link">Kontakt</a>
+                        <a href="/contact" class="nav-link">Kontakt</a>
                     </li class="nav-item">
                     <% if(currentUser){ %>
                     <li>

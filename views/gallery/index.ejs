@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+<%if(currentUser){ %>
+<div class="container text-right">
+    <a href="/gallery/new" class="btn btn-info mb-2">Dodaj galerie</a>
+</div>
+<%}%>
+<div class="container text-center">
+    <div class="row">
+        <% for(let i = gallery.length-1; i >= 0 ; i--) { %>
+<div class="gallery-card col-6 col-md-3 mt-2">
+    <a href="/gallery/<%= gallery[i]._id %>" class="gallery-link"><img src="<%= gallery[i].img %>" alt=""
+            class="gallery-card-img"></a>
+    <h1 class="gallery-title"><%= gallery[i].title %></h1>
+    <p class="gallery-desc">
+        <% if(gallery[i].desc){ %>
+        <% if(gallery[i].desc.length <= 40){ %>
+        <%= gallery[i].desc %>
+        <% }else{ %>
+        <%= gallery[i].desc.substring(0, 40) %>...
+        <% } } else { %>
+        <i class="far fa-smile-beam"></i>
+        <% } %>
+
+    </p>
+
+</div>
+<% } %>
+</div>
+</div>
+
+<%- include("../partials/footer") %>

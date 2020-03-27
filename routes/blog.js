@@ -15,6 +15,18 @@ router.get("/", (req, res) => {
     }
   });
 });
+// ARCHIVE ROUTE
+router.get("/archive", (req, res) => {
+  Blog.find({}, (err, blog) => {
+    if (err) {
+      console.log("ERROR : ${err.message}");
+    } else {
+      res.render("blog/archive", {
+        blog: blog
+      });
+    }
+  });
+});
 
 // NEW POST ROUTES
 router.get("/new", middleware.isLoggedIn, (req, res) => {
