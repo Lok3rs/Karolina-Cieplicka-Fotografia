@@ -46,6 +46,7 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
   const newPost = {
     title: title,
     img: img,
+    galleryUrl: galleryUrl,
     content: content,
     author: author
   };

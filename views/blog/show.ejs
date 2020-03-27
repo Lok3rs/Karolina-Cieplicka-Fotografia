@@ -2,29 +2,40 @@
 
 <div class="container">
     <div class="pt-4">
-        <h2 class="blog-title"><%= blog.title %></h2>
+        <h2 class="blog-title"><%= blog.title %>
+            <% if(currentUser){ %>
+            <div class="text-right mb-1 d-inline">
+                <a href="/blog/<%= blog._id %>/edit" class="btn btn-info"><i class="far fa-edit"></i> Edytuj</a>
+                <form style="display: inline" method="POST" action="/blog/<%=blog._id%>?_method=DELETE">
+                    <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i> Usuń</button>
+                </form>
+            </div>
+            <% } %>
+        </h2>
         <img src="<%= blog.img %>" alt="Image of <%= blog.title %>" class="img-fluid">
-        <p class="date"><%= blog.created.toLocaleDateString("pl-PL") %></p>
-        <p class="blog-content"><%= blog.content %></p>
-        <% if(currentUser){ %>
-        <a href="/blog/<%= blog._id %>/edit" class="btn btn-primary"><i class="far fa-edit"></i> Edytuj</a>
-        <form style="display: inline" method="POST" action="/blog/<%=blog._id%>?_method=DELETE">
-            <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i> Usuń</button>
-        </form>
+        <p class="date mb-1"><%= blog.created.toLocaleDateString("pl-PL") %></p>
+        <% if(blog.galleryUrl){ %>
+        <p class="text-center mt-0">
+            <a href="<%= blog.galleryUrl%>" class="blog-gallery-url"><i class="far fa-images"></i></a>
+        </p>
         <% } %>
+        <p class="blog-content"><%= blog.content %></p>
         <p class="text-right">
             <a href="/blog/<%= blog._id %>/comment/new" class="btn btn-primary btn-blog">Dodaj komentarz</a>
         </p>
         <% blog.comments.forEach((comment) => { %>
-        <p><%= comment.author %>- <strong><%= comment.text %></strong>
+        <p class="blog-comment d-inline">
+            <%= comment.text %> - <strong><%= comment.author %></strong>
             <%if(currentUser) { %>
-            <form id="delete-form" action="/blog/<%=blog._id %>/comment/<%=comment._id %>?_method=DELETE" method="POST">
-                <input type="submit" class="btn btn-sm btn-danger" value="Usuń">
+            <form id="delete-form" action="/blog/<%=blog._id %>/comment/<%=comment._id %>?_method=DELETE" method="POST"
+                class="d-inline">
+                <button type="submit" class="btn btn-sm btn-danger">Usuń</button>
             </form>
             <% } %>
+            <br>
         </p>
         <% }); %>
     </div>
 </div>
 
-< <%- include ("../partials/footer")%>
+<%- include ("../partials/footer")%>

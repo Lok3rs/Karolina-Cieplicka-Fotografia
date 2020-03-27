@@ -7,10 +7,13 @@
             <input type="text" name="blog[title]" class="form-control" id="blogTitle" value="<%= blog.title %>" require>
             <label for="blogImg">Link do zdjęcia</label>
             <input type="text" name="blog[img]" class="form-control" id="blogImg" value="<%= blog.img %>" require>
+            <label for="blogGallery">Link do galerii(opcjonalnie)</label>
+            <input type="text" name="blog[galleryUrl]" class="form-control" id="blogGallery"
+                value="<%= blog.galleryUrl %>">
             <label for="blogContent">Twój post: </label>
             <textarea name="blog[content]" cols="30" rows="10" class="form-control" id="blogContent"><%= blog.content %>
             </textarea>
-            <input type="submit" value="Akceptuj edycje" class="btn btn-lg btn-primary mt-2">
+            <input type="submit" value="Akceptuj edycje" class="btn btn-lg btn-info mt-2">
             <a href="/blog/<%= blog._id %>" class="btn btn-lg btn-danger mt-2">Wróć</a>
         </div>
     </form>

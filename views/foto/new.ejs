@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1>Dodawanie zdjęcia do <%= gallery.title %></h1>
-    <form action="/gallery/<%= gallery._id %>" method="POST">
+    <form action="/gallery/<%= gallery._id %>/foto" method="POST">
         <div class="form-group">
             <label for="fotoUrl">Link do zdjęcia: </label>
             <input type="text" name="foto[url]" class="form-control" id="fotoUrl">

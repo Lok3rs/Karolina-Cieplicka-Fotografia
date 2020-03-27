@@ -1,233 +1,249 @@
 /* main styles */
 html,
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Amatic SC", cursive;
-    min-height: 100%;
-    background: #F3ECE4;
-    height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Amatic SC", cursive;
+  min-height: 100%;
+  background: #f3ece4;
+  height: 100%;
 }
 
 .alert {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 /* navigation */
 #nav-ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    font-size: 30px;
-    font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .navbar {
-    font-size: 20px;
-    transition: 0.5s;
+  font-size: 20px;
+  transition: 0.5s;
 }
 
 .nav-item a img {
-    height: 70px;
+  height: 70px;
 }
 
 /* welcome page */
 
-
 .selfie {
-    float: right;
-    width: 30%;
-    border-radius: 50%
+  float: right;
+  width: 30%;
+  border-radius: 50%;
 }
 
 .its-me {
-    text-align: right;
-    font-size: 20px;
+  text-align: right;
+  font-size: 20px;
 }
 
 .arrow {
-    width: 10%;
-    position: relative;
-    bottom: 30px;
+  width: 10%;
+  position: relative;
+  bottom: 30px;
 }
 
 .social-h2 {
-    line-height: 47px;
+  line-height: 47px;
 }
 
 .social-img {
-    height: 40px;
-    width: auto;
+  height: 40px;
+  width: auto;
 }
 
 .social-img:hover {
-    height: 43px;
-    transition: 0.5s;
+  height: 43px;
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 600px) {
-    .hi-message {
-        font-size: 25px;
-        margin-top: 5vh;
-        float: left;
-        width: 70%;
-    }
+  .hi-message {
+    font-size: 18px;
+    float: left;
+    width: 70%;
+  }
 
-    .arrow {
-        bottom: 15px;
-    }
+  .arrow {
+    bottom: 15px;
+  }
 
-    .spec-h2 {
-        font-size: 25px;
-    }
+  .spec-h2 {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-    .hi-message {
-        font-size: 30px;
-        margin-top: 5vh;
-        float: left;
-        width: 70%;
-    }
+  .hi-message {
+    font-size: 30px;
+    margin-top: 5vh;
+    float: left;
+    width: 70%;
+  }
 
-    .arrow {
-        bottom: 20px;
-    }
+  .arrow {
+    bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
-    .hi-message {
-        float: left;
-        width: 70%;
-        font-size: 40px;
-        margin-top: 15vh;
-    }
+  .hi-message {
+    float: left;
+    width: 70%;
+    font-size: 40px;
+    margin-top: 15vh;
+  }
 
-    .its-me {
-        text-align: right;
-        font-size: 35px;
-        vertical-align: bottom;
-    }
-
-
+  .its-me {
+    text-align: right;
+    font-size: 35px;
+    vertical-align: bottom;
+  }
 }
 
 .carousel-inner {
-    height: 100vh;
+  height: 100vh;
 }
 
 .carousel-1 {
-    background: url("../media/01.jpg");
+  background: url("../media/01.jpg");
 }
 
 .carousel-2 {
-    background: url("../media/02.jpg");
+  background: url("../media/02.jpg");
 }
 
 .carousel-3 {
-    background: url("../media/04.jpg");
+  background: url("../media/04.jpg");
+}
+
+@media only screen and (max-width: 900px) {
+  .carousel-3 {
+    background: url("../media/07.jpg");
+  }
 }
 
 .carousel-1,
 .carousel-2,
 .carousel-3 {
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .row .col-md-6 {
-    height: 70vh;
+  height: 70vh;
 }
 
 .sis-1 {
-    background-image: url("../media/sis-2.jpg");
+  background-image: url("../media/sis-2.jpg");
 }
 
 .sis-2 {
-    background-image: url("../media/grass.jpg");
+  background-image: url("../media/grass.jpg");
 }
 
 .sis-3 {
-    background-image: url("../media/sis-3.jpg");
+  background-image: url("../media/sis-3.jpg");
 }
 
 .sis-1,
 .sis-2,
 .sis-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .img-competence {
-    height: 70px;
-    margin-right: 20px;
+  height: 70px;
+  margin-right: 20px;
 }
 
 /* blog list */
 .card {
-    background: none;
-    border: none;
-    text-align: center;
-    font-size: 20px;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 20px;
 }
 
 .card h5 {
-    font-size: 30px;
-    font-weight: 600;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .card a {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .card img {
-    min-width: 350px;
-    width: 40vw;
-    height: auto;
-    margin: 0px auto;
+  min-width: 350px;
+  width: 40vw;
+  height: auto;
+  margin: 0px auto;
 }
 
 .btn-primary.btn-blog {
-    background-image: linear-gradient(110.3deg,
-            rgba(238, 179, 123, 1) 8.7%,
-            rgba(216, 103, 77, 1) 47.5%,
-            rgba(114, 43, 54, 1) 89.1%);
-    color: #fff;
-    border: none;
+  background-image: linear-gradient(
+    110.3deg,
+    rgba(238, 179, 123, 1) 8.7%,
+    rgba(216, 103, 77, 1) 47.5%,
+    rgba(114, 43, 54, 1) 89.1%
+  );
+  color: #fff;
+  border: none;
 }
 
 .btn-primary.btn-blog:hover {
-    background-image: linear-gradient(110.3deg,
-            rgb(235, 184, 137) 8.7%,
-            rgb(216, 117, 94) 47.5%,
-            rgb(114, 51, 61) 89.1%);
-    color: #ece7e3;
+  background-image: linear-gradient(
+    110.3deg,
+    rgb(235, 184, 137) 8.7%,
+    rgb(216, 117, 94) 47.5%,
+    rgb(114, 51, 61) 89.1%
+  );
+  color: #ece7e3;
 }
 
 /* blog/show */
 .blog-title {
-    text-align: center;
-    font-size: 60px;
-    font-weight: 600;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .date {
-    text-align: center;
-    font-style: italic;
-    font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .blog-content {
-    text-align: justify;
-    font-size: 25px;
-    line-height: 30px;
+  text-align: justify;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.blog-comment {
+  font-size: 20px;
+}
+
+.blog-gallery-url {
+  text-decoration: none;
+  color: #000;
+  font-size: 40px;
 }
 
 /* CONTACT PAGE */
@@ -235,94 +251,97 @@ body {
 .contact-form,
 .contact-p,
 .inbox-detail {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .contact-p a,
 .inbox-detail a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .contact-logo {
-    max-width: 100vw;
+  max-width: 100vw;
 }
 
 .contact-left {
-    min-height: 90vh;
+  min-height: 90vh;
 }
 
 .inbox-list {
-    font-size: 20px;
-    width: 100%;
-    text-align: center;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .inbox-message-title {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 /* ARCHIVE */
 .archive-list {
-    width: 100%;
-    text-align: center;
-    ;
+  width: 100%;
+  text-align: center;
 }
 
 /* GALLERY */
 .gallery-card-img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .gallery-enter-hover {
-    transition: 0.2s;
-    opacity: 0.7;
+  transition: 0.2s;
+  opacity: 0.7;
 }
 
-
 .gallery-link {
-    position: relative;
-    text-align: center;
-    text-decoration: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }
 
 .gallery-link img {
-    border-radius: 5%;
+  border-radius: 5%;
 }
 
 .gallery-enter {
-    color: #fff;
-    font-size: 30px;
-    width: 100%;
-    height: 150px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .gallery-thumbnail {
-    width: 100%;
+  width: 100%;
+  height: 230px;
+  border-radius: 2%;
+}
+
+@media only screen and (max-width: 900px) {
+  .gallery-thumbnail {
     height: auto;
-    border-radius: 2%;
+  }
 }
 
 .gallery-container {
-    text-align: center;
+  text-align: center;
 }
 
 .gallery-title {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .gallery-description {
-    font-size: 20px;
-
+  font-size: 20px;
 }

@@ -4,6 +4,7 @@ const blogSchema = new mongoose.Schema({
   title: String,
   img: String,
   content: String,
+  galleryUrl: String,
   created: {
     type: Date,
     default: Date.now

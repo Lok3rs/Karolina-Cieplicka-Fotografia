@@ -18,6 +18,7 @@ router.get("/new", middleware.isLoggedIn, (req, res) => {
     }
   });
 });
+
 router.post("/", (req, res) => {
   Gallery.findById(req.params.id, (err, gallery) => {
     if (err) {
