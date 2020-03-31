@@ -26,7 +26,7 @@ router.post("/", (req, res) => {
       res.render("back");
     } else {
       req.flash("success", "Dzięki za kontakt! Odpowiem jak najszybciej!");
-      res.redirect("/contact");
+      res.redirect(req.get("referer"));
     }
   });
 });

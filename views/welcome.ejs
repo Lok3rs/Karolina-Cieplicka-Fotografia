@@ -26,12 +26,13 @@
             <li data-target="#img-carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active carousel-1">
+            <div class="carousel-item active carousel-1" data-id="0">
             </div>
-            <div class="carousel-item carousel-2">
+            <div class="carousel-item carousel-2" data-id="1">
             </div>
-            <div class="carousel-item carousel-3">
+            <div class="carousel-item carousel-3" data-id="2">
             </div>
+
         </div>
         <a class="carousel-control-prev" href="#img-carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -73,20 +74,42 @@
     </div>
 
 
+    <div class="row">
+        <div class="col-md-6 col-12 text-center contact-left">
+            <img src="/media/logo.png" alt="Logo" class="contact-logo">
+            <p class="contact-p">
+                <b>Numer telefonu: </b><a href="tel:+48695556367">695 556 367</a>
+            </p>
+            <p class="contact-p">
+                <b>Email: </b><a href="mailto:email@email.com">email@email.com</a>
+            </p>
+            <p class="mt-3 contact-p">
+                Napisz, zadzwoń lub wypełnij formularz, a ja odezwę się do Ciebie.
+            </p>
+            <img src="/media/smile.png" alt="smile">
+            <img src="/media/arrdown.png" alt="arrow down" class="d-block d-md-none mx-auto mt-2">
+        </div>
+        <div class="col-md-6 col-12 mt-1">
+            <form action="/contact" method="POST" class="contact-form" id="contactForm">
+                <label for="contactAuthor" class="mb-0">Przedstaw się </label>
+                <input type="text" name="contact[author]" id="contactAuthor" required>
+                <label for="contactEmail" class="mb-0 mt-1">Twój email </label>
+                <input type="email" name="contact[email]" id="contactEmail" required>
+                <label for="contactTel" class="mb-0 mt-1">Numer telefonu (opcjonalnie) </label>
+                <input type="tel" name="contact[tel]" id="contactTel">
+                <label for="contactText" class="mb-0 mt-1">Wiadomość </label>
+                <textarea type="text" name="contact[text]" id="contactText" form="contactForm" rows="4" required>
+                </textarea>
+                <button type="submit" class="btn btn-lg btn-primary btn-blog mt-3">Wyślij</button>
+                <% if(currentUser){ %>
+                <a href="/contact/inbox" class="btn btn-lg btn-info mt-3">Skrzynka odbiorcza</a>
+                <% } %>
+            </form>
+        </div>
+    </div>
+
 </div>
 
-<div id="pixlee_container"></div>
-<script type="text/javascript">
-    window.PixleeAsyncInit = function () {
-        Pixlee.init({
-            apiKey: '9cxl-vriIWJbaVFlyQwp'
-        });
-        Pixlee.addSimpleWidget({
-            widgetId: '26144'
-        });
-    };
-</script>
-<script src="https://instafeed.assets.pxlecdn.com/assets/pixlee_widget_1_0_0.js"></script>
 
 
 <%- include ("partials/footer")%>

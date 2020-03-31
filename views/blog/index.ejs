@@ -9,7 +9,7 @@
                 <img src="<%= blog[i].img %>" class="card-img-top" alt="Image of <%= blog[i].title %>">
                 <div class="card-body">
                     <h5 class="card-title"><%= blog[i].title %></h5>
-                    <p class="card-text"><%= blog[i].content.substring(0, 100) %>...</p>
+                    <p class="card-text content-sub"><%= blog[i].content.substring(0, 100) %>...</p>
                     <a href="/blog/<%=blog[i]._id %>" class="btn btn-primary btn-blog">Zobacz więcej</a>
                 </div>
             </div>

@@ -44,11 +44,11 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
       username: req.user.username
     };
   const newPost = {
-    title: title,
-    img: img,
-    galleryUrl: galleryUrl,
-    content: content,
-    author: author
+    title,
+    img,
+    // galleryUrl,
+    content,
+    author
   };
   Blog.create(newPost, (err, newP) => {
     if (err) {

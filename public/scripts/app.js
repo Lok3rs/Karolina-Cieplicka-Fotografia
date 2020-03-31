@@ -6,7 +6,7 @@ $(".carousel").carousel({
 // check if navbar is on top, if not- change color
 $(window).on("scroll", () => {
   const navbar = $(".navbar");
-  navbar.position().top == 0
+  $(window).scrollTop() == 0
     ? navbar.css("background-color", "")
     : navbar.css("background-color", "rgba(243, 236, 228, 0.5)");
 });
@@ -33,3 +33,19 @@ $(".gallery-thumbnail-link").mouseout(function() {
   $(this).removeClass("gallery-enter-hover");
   $(this).find("span");
 });
+
+// Blog content displaying properly
+const blogContent = $(".blog-content");
+const blogText = blogContent.text();
+
+blogContent.html(blogText);
+
+// Proper display of substring on list of blox (without html tags)
+const subcontent = $(".content-sub");
+
+for (let content of subcontent) {
+  let text = $(content).text();
+  $(content).html(text);
+  let actual = $(content).text();
+  $(content).text(actual);
+}

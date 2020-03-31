@@ -9,13 +9,18 @@
             <label for="blogImg">Link do zdjęcia</label>
             <input type="text" name="blog[img]" class="form-control" id="blogImg" require>
             <label for="blogGallery">Link do galerii(opcjonalnie)</label>
-            <input type="text" name="blog[galleryUrl]" class="form-control" id="blogGallery">
-            <small class="text-muted">Możesz go dodać później</small>
+            <input type="text" name="blog[galleryUrl]" class="form-control" id="blogGallery" disabled
+                placeholder="Musisz go dodać później w edycji">
             <label for="blogContent">Twój post: </label>
             <textarea name="blog[content]" cols="30" rows="10" class="form-control" id="blogContent"></textarea>
             <input type="submit" value="Dodaj" class="btn btn-lg btn-primary btn-blog mt-2">
         </div>
     </form>
 </div>
+
+<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">
+    bkLib.onDomLoaded(nicEditors.allTextAreas);
+</script>
 
 <%- include("../partials/footer") %>

@@ -19,7 +19,9 @@
             <a href="<%= blog.galleryUrl%>" class="blog-gallery-url"><i class="far fa-images"></i></a>
         </p>
         <% } %>
-        <p class="blog-content"><%= blog.content %></p>
+        <p class="blog-content preserve-whitespace">
+            <%= blog.content %>
+        </p>
         <p class="text-right">
             <a href="/blog/<%= blog._id %>/comment/new" class="btn btn-primary btn-blog">Dodaj komentarz</a>
         </p>
