@@ -39,14 +39,15 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
   const title = req.body.blog.title,
     img = req.body.blog.img,
     content = req.body.blog.content,
-    author = {
-      id: req.user._id,
-      username: req.user.username
-    };
+    galleryUrl = req.body.blog.galleryUrl;
+  author = {
+    id: req.user._id,
+    username: req.user.username
+  };
   const newPost = {
     title,
     img,
-    // galleryUrl,
+    galleryUrl,
     content,
     author
   };

@@ -6,7 +6,7 @@ body {
   font-family: "Amatic SC", cursive;
   min-height: 100%;
   background: #f3ece4;
-  height: 100%;
+  min-height: 80vh;
 }
 
 .alert {
@@ -125,20 +125,20 @@ body {
 }
 
 .carousel-1 {
-  background: url("../media/09.jpg");
-}
-
-.carousel-2 {
   background: url("../media/04.jpg");
 }
 
+.carousel-2 {
+  background: url("../media/12.jpg");
+}
+
 .carousel-3 {
-  background: url("../media/11.jpg");
+  background: url("../media/07.jpg");
 }
 
 
 @media only screen and (max-width: 900px) {
-  .carousel-2 {
+  .carousel-1 {
     background: url("../media/10.jpg");
   }
 }
@@ -254,6 +254,11 @@ body {
   font-size: 40px;
 }
 
+.blog-gallery-url:hover {
+  color: #666;
+
+}
+
 /* CONTACT PAGE */
 
 .contact-form,
@@ -292,6 +297,17 @@ body {
 
 .inbox-message-title {
   font-size: 40px;
+}
+
+.contact-space-maker {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-space-maker {
+    display: block;
+    height: 100px;
+  }
 }
 
 /* ARCHIVE */
@@ -354,4 +370,79 @@ body {
 
 .gallery-description {
   font-size: 20px;
+}
+
+/* footer */
+
+
+footer .container {
+  border-top: 1px solid #ddd;
+}
+
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+
+footer p a {
+  text-decoration: none;
+  color: #000
+}
+
+@media only screen and (max-width: 900px) {
+  footer p {
+    font-size: 10px;
+  }
+}
+
+
+footer p a:hover {
+  color: #fff
+}
+
+.footer-logo {
+  width: 100%
+}
+
+.dane p {
+  position: relative;
+  top: 2vw;
+}
+
+.footer-social {
+  height: 30px;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .footer-social {
+    height: 35px;
+    margin-top: 20px;
+  }
+}
+
+.footer-author {
+  margin-top: 3vw;
+}
+
+.svg-made {
+  font-size: 10px;
+}
+
+.svg-made a {
+  text-decoration: none;
+  color: #000
+}
+
+@media only screen and (max-width: 900px) {
+
+  .img-social-footer {
+    height: 16px;
+  }
+
+  .footer-logo {
+    margin: 3vw
+  }
 }

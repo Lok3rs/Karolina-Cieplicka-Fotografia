@@ -14,9 +14,9 @@ router.get("/welcome", (req, res) => {
 });
 
 // REGISTER/LOGIN ROUTES
-router.get("/register", (req, res) => res.render("auth/register"));
+router.get("/secretregister", (req, res) => res.render("auth/register"));
 
-router.post("/register", (req, res) => {
+router.post("/secretregister", (req, res) => {
   User.register(
     new User({
       username: req.body.username,
@@ -40,7 +40,7 @@ router.get("/login", (req, res) => res.render("auth/login"));
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/blog",
+    successRedirect: "/welcome",
     failureRedirect: "/login",
     failureFlash: true
   }),
@@ -52,7 +52,7 @@ router.post(
 router.get("/logout", (req, res) => {
   req.logout();
   req.flash("success", "Wylogowano, miłego dnia!");
-  res.redirect("/blog");
+  res.redirect(req.get("referer"));
 });
 
 module.exports = router;
